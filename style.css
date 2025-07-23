@@ -1,6 +1,97 @@
+body{
+   /* font-family: 'gen'; */
+   font-family: Courier;
+   font-weight: 100;
+   font-size: 0.8rem;
+   /* background-color: rgb(30, 212, 152); */
+   background-color: black;
+   color: red;
+   display: grid;
+   gap: 10px;
+
+}
+
+@keyframes float {
+            0% {
+                transform: translateY(-20px);
+            }
+
+            50% {
+                transform: translateY(20px);
+            }
+
+            100% {
+                transform: translateY(-20px);
+            }
+        }
 
 
+#bring{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#bring-box{
+    width: 80vw;
+    height: 150px;
+}
+
+.floating0 {
+    position: relative;
+    animation: float 3s ease-out infinite;
+}
+
+.floating1 {
+    position: relative;
+    animation: float 7s ease-in-out infinite;
+}
+
+.floating2 {
+    position: relative;
+    animation: float 1.5s ease-in-out infinite;
+}
+
+.floating3 {
+    position: relative;
+    animation: float 5s ease-in-out infinite;
+}
+
+.item{
+    width: 33%;
+    height: 150px;
+}
 
  #month-slider{
    writing-mode: vertical-lr;
  }
+
+#test{
+    display: grid;
+    justify-content: center;
+}
+
+ #test-pic-box{
+    display: flex;
+    flex-flow: row wrap;
+    width: 80vw;
+    /* height: 100vw; */
+    gap: 5px;
+    overflow: hidden;
+ }
+ .test-pic{
+    flex: 1 0 50%;
+    max-width: 48%;
+    max-height: 48%;
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition:
+    all 1s;
+ }
+ .test-pic:hover {
+    /* transform: scale(1.1); */
+    rotate: 360deg;
+    /* box-shadow: 0 0 115px rgb(101, 228, 101); */
+    }
