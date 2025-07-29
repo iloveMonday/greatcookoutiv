@@ -32,6 +32,18 @@ body {
   }
 }
 
+ a{
+   color: rgb(186, 59, 211);
+ }
+
+ a:visited{
+   color: rgb(38, 153, 192)
+ }
+
+ a:hover{
+   color: hotpink;
+ }
+
 
 div {
   max-width: 500px;
@@ -56,6 +68,30 @@ textarea {
 #bring-box {
   width: 90vw;
   height: 150px;
+}
+
+#bring-button {
+	box-shadow: 3px 4px 0px 0px #8a2a21;
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	background-color:#c62d1f;
+	border-radius:18px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:14px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+#bring-button:hover {
+	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+	background-color:#f24437;
+}
+#bring-button:active {
+	position:relative;
+	top:1px;
 }
 
 .bye {
@@ -94,6 +130,20 @@ textarea {
   animation: float 5s ease-in-out infinite;
 }
 
+fieldset{
+  border-color: rgb(169, 28, 197)
+}
+
+footer{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 10px;
+   align-items: center;
+   justify-content: center;
+   margin-top: 25px;
+}
+
 .item {
   width: 33%;
   height: 150px;
@@ -120,6 +170,11 @@ textarea {
   /* height: 615px; */
   background-color: rgba(255, 255, 255, 0.6);
   background-blend-mode: lighten;
+}
+
+#personal{
+  border-radius: 5px;
+  background-position: center top;
 }
 
 #test {

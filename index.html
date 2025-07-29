@@ -51,6 +51,7 @@
                             <option value="">Other</option>
                         </select>
                         <br><br>
+                        
         
                         <div id="dob">
                             <label for="dob" class="topic">D.O.B.: <span id="date-display"></span></label><br>
@@ -76,11 +77,49 @@
             </fieldset>
         </div>
         <div id="bring">
-            <legend>Not Sure What To Bring? Well Let's...</legend>
-            <button id="bring-button">GO SHOPPING!</button>
-            <fieldset>
+            <fieldset id="bringer">
+            <legend>Not Sure What To Bring?</legend>
+            <button id="bring-button">LET'S GO SHOPPING</button>
+            <br><br>            
                 <div id="bring-box"></div>
             </fieldset>
         </div>
+
+        <div class="rsvp">
+            <fieldset id="rsvp" aria-errormessage="errormsg" required>
+                    <legend>Your R. S'il Vous Plait</legend>
+                    <input type="radio" id="yes" value="coming" name="rsvp" checked>
+                    <label for="yes">I'm Already There</label><br>
+    
+                    <input type="radio" id="maybe" value="not coming" name="rsvp">
+                    <label for="maybe">I've Got Another Thing</label><br>
+    
+                    <input type="radio" id="9" value="..hold on my wife is calling" name="rsvp">
+                    <label for="9">I Hear My Wife Calling Me</label><br>
+    
+                    <input type="radio" id="good-enough" value="my dog might come" name="rsvp">
+                    <label for="good-enough">Nope, That's Just My Dog</label><br>
+    
+                    <input type="radio" id="no" value="dog" name="rsvp">
+                    <label for="no">Well The Dog Needs Me Now</label><br>
+
+                    <input type="radio" id="no" value="not coming" name="rsvp">
+                    <label for="no">Maybe Next Year</label><br>
+                </fieldset>
+        </div>
+
+
+            <footer>
+            <span id="seealso">see also</span>
+            <a href="https://ilovemonday.github.io/agreatcookout/">a great cookout</a>
+            <a href="https://ilovemonday.github.io/great-cookout-sequel/">great cookout sequel</a>
+            <a href="https://ilovemonday.github.io/greatcookoutiii/">great cookout iii</a>
+            <a href="https://ilovemonday.github.io/odin-weather/">weatherman</a>
+            <a href="https://ilovemonday.github.io/odin-restaurant/">divorce</a>
+            <a href="https://ilovemonday.github.io/salmon/">salmon dinner</a>
+            <a href="https://ilovemonday.github.io/odin-etch/">etch-a-sketch</a>
+            <a href="https://ilovemonday.github.io/odin-tic-tac-toe/">pelosi's tiktok</a>
+            <a href="https://ilovemonday.github.io/odin-calc/">a calculator why not</a>
+    </footer>
 </body>
 </html>
