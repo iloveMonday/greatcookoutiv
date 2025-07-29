@@ -58,6 +58,16 @@ textarea {
   border: 1px solid #0a0a23;
 }
 
+ #banner{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 5px;
+   max-width: 400px;
+   width: 95%;
+   border: 5px solid rgb(169, 28, 197)
+
+ }
 
 #bring {
   display: grid;
