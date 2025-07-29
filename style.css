@@ -1,11 +1,18 @@
+@font-face {font-family: "chiller"; src: url("./fonts/chiller.ttf")}
+@font-face {font-family: "oddballz"; src: url("./fonts/oddballz.ttf")}
+@font-face {font-family: "gen"; src: url("./fonts/Gen-Light.otf")}
+@font-face {font-family: "bybsy"; src: url(./fonts/bybsy-regular-webfont.ttf);}
+@font-face {font-family: "playwrite"; src: url(./fonts/PlaywriteCU-VariableFont_wght.ttf);}
+
 body {
   /* font-family: 'gen'; */
   font-family: Courier;
-  font-weight: 100;
+  font-weight: 600;
   font-size: 0.8rem;
   /* background-color: rgb(30, 212, 152); */
-  background-color: black;
-  color: red;
+  /* background-color: black; */
+  background-color: rgb(134, 233, 200);
+  color: black;
   display: grid;
   gap: 10px;
   justify-content: center;
@@ -101,19 +108,19 @@ textarea {
   width: 100%;
 }
 
+ legend{
+   font-family: 'oddballz';
+   color: rgb(37, 36, 36)
+ }
+
 .personal {
-  color:#0a0a23;
-  font-weight: 600;
+  /* color:#0a0a23;
+  font-weight: 600; */
   background-size: contain;
   /* height: 615px; */
   background-color: rgba(255, 255, 255, 0.6);
   background-blend-mode: lighten;
 }
-
-/* .lessen{
-    background-color: rgba(255,255,255,0.6);
-    background-blend-mode: lighten;    
- } */
 
 #test {
   display: grid;
@@ -137,6 +144,7 @@ textarea {
   border-radius: 12px;
   transition: all 1s;
 }
+
 .test-pic:hover {
   /* transform: scale(1.1); */
   rotate: 360deg;
