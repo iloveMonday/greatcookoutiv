@@ -8,8 +8,7 @@ window.onload = function() {
     monthBackground();
 };
 
-let all = document.querySelector(".all");
-let fix = document.getElementById("fix");
+
 let personal = document.getElementById("personal");
 let monthSlider = document.getElementById("month-slider");
 let daySlider = document.getElementById("day-slider");
@@ -20,10 +19,7 @@ let bringButton = document.getElementById("bring-button");
 let bringBox = document.getElementById("bring-box");
 let slide = 1;
 
-fix.addEventListener("click", ()=>{
-    all.classList.remove("all");
-    fix.classList.add("bye");
-})
+
 
 
 function monthBackground(){
@@ -192,6 +188,7 @@ bringButton.addEventListener("click", ()=>{
     bringBox.innerHTML = '';
     for (i=0; i<3; i++)
     {bringIt(i);}
+    console.log("hi")
 })
 
 

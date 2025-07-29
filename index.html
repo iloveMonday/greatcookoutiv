@@ -9,27 +9,54 @@
     <link rel="icon" href="https://static.wikia.nocookie.net/sawfilms/images/4/4a/Site-favicon.ico/revision/latest?cb=20231021114956">
 </head>
 <body>
-    <br><br>
-    <button id="fix">HELP</button>
-    <br><br>
-    <div class="all">
         <div id="personal">
             <fieldset class="personal">
                 <legend>First of All...</legend>
                         <label id="name-label" class="topic">What is Your Name?</label> <br>
                         <input id="name" class="pert" required type="text" maxlength="40" placeholder="Belinda Pencil"></input>
                         <br><br>
+
+                        <label id="name2-label" class="topic">Are You Sure?</label> <br>
+                        <input id="name2" type="text" maxlength="40" placeholder="(optional)"></input>
+                        <br><br>
         
                         <label id="email-label" for="email" class="topic">What is Your Email? (please skip):</label> <br>
                         <input id="email" class="pert" type="email" maxlength="40" placeholder="absolutelydonotskip@billy.net"></input>
                         <br><br>
+
+                        <label id="nature" for="nature">The Nature Of My Attendance Will Be Mostly:</label><br>
+                         <label><input type="checkbox" class="inline" name="nature" value="social">Social</label>
+                         <label><input type="checkbox" class="inline" name="nature" value="culinary">Culinary</label>
+                         <label><input type="checkbox" class="inline" name="nature" value="networking">Networking</label><br>
+                         <label><input type="checkbox" class="inline" name="nature" value="obligatory">Obligatory</label>
+                         <label><input type="checkbox" class="inline" name="nature" value="spiritual">Spiritual</label>
+                         <label><input type="checkbox" class="inline" name="nature" value="clout-driven">Clout-Driven</label><br>
+                         <label><input type="checkbox" class="inline" name="nature" value="fomo-based">FOMO-Based</label>
+                         <label><input type="checkbox" class="inline" name="nature" value="decentralized">Decentralized</label>
+                         <label><input type="checkbox" class="inline" name="nature" value="romantic">Romantic</label><br>
+                         <label><input type="checkbox" class="inline" name="nature" value="carnal">Carnal</label>
+                         <label><input type="checkbox" class="inline" name="nature" value="humbling">Humbling</label>
+                         <label><input type="checkbox" class="inline" name="nature" value="we'll see">We'll See</label>
+                        <br><br>
+
+                        <label for="drive">You Good To Drive?</label><br>
+                        <select name="drive-select" id="dropdown">
+                            <option value="">(select one)</option>
+                            <option value="">Couldn't Be Better</option>
+                            <option value="">Couldn't Be Worse</option>
+                            <option value="">Could You Repeat That</option>
+                            <option value="">Could You? For Me?</option>
+                            <option value="">I'm So Scared That I'll Never Get Put Back Together</option>
+                            <option value="">I'll Take It From Here</option>
+                            <option value="">Other</option>
+                        </select>
+                        <br><br>
         
                         <div id="dob">
-                            <label for="dob" class="topic">D.O.B.:</label><br>
+                            <label for="dob" class="topic">D.O.B.: <span id="date-display"></span></label><br>
                             <input type="range" min="1" max="12" value="4" class="slider" id="month-slider">
                             <input type="range" min="1" max="32" value="20" class="slider" id="day-slider">
                             <div id="dob-disp">
-                                <span id="date-display"></span><br>
                                 <span id="day-disp"></span>
                             </div>
                         </div>
@@ -54,6 +81,5 @@
                 <div id="bring-box"></div>
             </fieldset>
         </div>
-    </div>
 </body>
 </html>
