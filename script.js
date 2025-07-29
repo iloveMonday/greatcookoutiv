@@ -2,11 +2,62 @@ function rand(){
     return Math.floor(Math.random() * 10);
 }
 
+window.onload = function() {
+    upDate();
+    updateDay();
+    monthBackground();
+};
 
+let all = document.querySelector(".all");
+let fix = document.getElementById("fix");
+let personal = document.getElementById("personal");
+let monthSlider = document.getElementById("month-slider");
+let daySlider = document.getElementById("day-slider");
+let dayDisp = document.getElementById("day-disp");
+let dateDisplay = document.getElementById("date-display");
 let testBox = document.getElementById("test-pic-box");
 let bringButton = document.getElementById("bring-button");
 let bringBox = document.getElementById("bring-box");
 let slide = 1;
+
+fix.addEventListener("click", ()=>{
+    all.classList.remove("all");
+    fix.classList.add("bye");
+})
+
+
+function monthBackground(){
+    let month = monthSlider.value;
+    personal.className = "lessen";
+    personal.style.backgroundImage = "url('./months/" + month +".jpg')"
+}
+
+monthSlider.addEventListener("input", ()=>{
+    upDate();
+    monthBackground();
+})
+
+daySlider.oninput = function () {
+    upDate();
+    updateDay();
+};
+
+function updateDay(){
+      dayDisp.innerHTML = "";
+
+  for (let i = 0; i < daySlider.value; i++) {
+    let img = document.createElement("img");
+    img.src = "./corn.svg";
+    img.className = "corn"
+    dayDisp.appendChild(img);
+  }
+}
+
+function upDate(){
+    let month = monthMan(monthSlider.value);
+    let day = daySlider.value
+    dateDisplay.innerHTML = month + " " + day
+}
 
 
 // function newTestPics(num){
@@ -112,8 +163,9 @@ const images = [
     "./bring/seltzy3.png",
     "./bring/seltzy4.png",
     "./bring/shrimp.png",
-    "./bring/slaw.png","./bring/solo.png","./bring/sonic.png","./bring/sonicare.png","./bring/sweetbabyrays.png","./bring/tobin.png",
-    "./bring/whiteclaw.png","./bring/whiteclawpure.png","./bring/zatlas.gif","./bring/zjoker.gif", "./bring/zlion.gif",
+    "./bring/slaw.png","./bring/solo.png","./bring/sonic.png","./bring/sonicare.png","./bring/sweetbabyrays.png","./bring/tobin.png", "./bring/mcdondon.png",
+    "./bring/egg.png", "./bring/spice.png", "./bring/gruel.png", 
+    "./bring/whiteclaw.png","./bring/whiteclawpure.png","./bring/zatlas.gif","./bring/zjoker.gif", "./bring/zlion.gif", "./bring/slop-vial.png", "./bring/slop2.png",
 ];
 
 
@@ -145,7 +197,7 @@ bringButton.addEventListener("click", ()=>{
 
 
 
-function month(num){
+function monthMan(num){
     if (num ==1){
         return "Jan"
     }
@@ -177,12 +229,12 @@ function month(num){
         return "Oct"
     }
     else if (num ==11){
-        return "RIVRI"
-    }
-    else if (num ==12){
         return "Nov"
     }
-    else return "Dec"
+    else if (num ==12){
+        return "Dec"
+    }
+    else return "Other"
     
 
 }
