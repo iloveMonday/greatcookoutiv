@@ -11,6 +11,7 @@ window.onload = function() {
 
 let personal = document.getElementById("personal");
 let name = document.getElementById("name");
+let name2 = document.getElementById("name2");
 let contact = document.getElementById("email");
 let nature = document.getElementById("nature");
 let monthSlider = document.getElementById("month-slider");
@@ -22,8 +23,9 @@ let eNumber = document.getElementById("e-number");
 let bringButton = document.getElementById("bring-button");
 let bringBox = document.getElementById("bring-box");
 let rsvpForm = document.getElementById("rsvp");
+let feedback = document.getElementById("feedback");
 let slide = 1;
-let ethicsSore = 0;
+let ethicsScore = 0;
 
 
 
@@ -65,6 +67,8 @@ function newTestSlide(num){
     testBox.innerHTML = '';
 
     if (num < 12){
+    ethicsScore = rand()+ethicsScore;
+
     let pic1 = document.createElement("img");
     let pic2 = document.createElement("img");;
     let pic3 = document.createElement("img");;
@@ -87,19 +91,23 @@ function newTestSlide(num){
     testBox.appendChild(pic1);
     testBox.appendChild(pic2);
     testBox.appendChild(pic3);
-    testBox.appendChild(pic4);}
+    testBox.appendChild(pic4);
+    }
     else{
         let thanks = document.createElement("img");
         thanks.src = './test/dunkthank.jpg';
         thanks.className = 'dunkthank';
         testBox.appendChild(thanks);
+        eNumber.innerHTML = "";
+        eNumber.innerHTML = ethicsScore;
     }
 }
 
 
 testBox.addEventListener("click", ()=>{
     slide++;
-    newTestSlide(slide)
+    newTestSlide(slide);
+    console.log(ethicsScore)
 })
 
 
@@ -199,32 +207,42 @@ function displayRSVP(){
     let info = document.getElementById("info-body");
     let iname = document.getElementById("info-name");
     let icontact = document.getElementById("iContact");
-    let iapproach = document.getElementById("iApproach");
+    let iethic = document.getElementById("iEthic");
+    // let iapproach = document.getElementById("iApproach");
     let natureSelect = nature.querySelector('input:checked');
+    let also = document.getElementById("also");
+    let alias = document.getElementById("alias");
     let rsvp = rsvpForm.querySelector('input:checked');
     let dir = document.getElementById("rsvp-directions");
 
 
     // ------------KEEP THIS - UNBLOCK IT!!1---------------
-    // if (name.value == ""){
-    //     alert("what is your name my dear boy?")
-    //     return
-    // }
+    if (name.value == ""){
+        alert("what is your name my dear boy?")
+        return
+    }
 
-    info.innerHTML = `This is an RSVP from the one and only ${name.value} here to tell you that ${rsvp.value} to your wack-ass country club.
+    info.innerHTML = `This is an RSVP from the one and only ${name.value}, born on ${monthSlider.value}/${daySlider.value}, here to tell you that ${rsvp.value} to your wack-ass country club.
                         You can expect a somewhat ${natureSelect.value} approach from me.`;
         
         
-        // This comes as no surprise with and Ethics & Morality score of ${}.
+    if(ethicsScore > 1){
+        iethic.innerHTML = `This comes as no surprise with an Ethics & Morality score of ${ethicsScore}.`}
     
     if (contact.value){
-    icontact.innerHTML = `If you need to reach me, hit up at ${contact.value}.`;
+        icontact.innerHTML = `If you need to reach me, hit up at ${contact.value}.`;
 }
+
+    if (feedback.value){
+        also.innerHTML = `And by the way, ${feedback.value}`
+    }
+
+    if (name2.value){
+        alias.innerHTML = `Sincerely, ${name2.value}`
+    }
 
     infoBox.classList.remove("bye");
     dir.classList.remove("bye");
-    console.log("hi");
-    console.log(contact.value)
 }
 
 let submit = document.getElementById("submit");

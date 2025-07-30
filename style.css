@@ -9,7 +9,7 @@ body {
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
-  gap: 10px;
+  gap: 15px;
   font-family: Courier;
   font-weight: 600;
   font-size: 0.8rem;
@@ -51,9 +51,10 @@ div {
 input[type="text"],
 input[type="email"],
 textarea {
-  background-color: #0a0a23;
-  color: whitesmoke;
-  width: 90%;
+  /* background-color: #0a0a23; */
+  background-color: rgb(231, 185, 240);
+  color: black;
+  width: 100%;
   border: 1px solid #0a0a23;
 }
 
@@ -129,6 +130,12 @@ textarea {
   border-radius: 15px;
 }
 
+#e-number{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #833dbf;
+  font-size: 55px;
+}
+
 .e-score{
   font-size: 40px;
     display: flex;
@@ -176,6 +183,8 @@ footer{
 }
 
 #info{
+  padding-left: 10px;
+  padding-right: 10px;
   background-color: #600fa3;
   color: white;
 }
@@ -197,6 +206,10 @@ footer{
  legend{
    font-family: 'oddballz';
    color: rgb(37, 36, 36)
+ }
+
+ #option{
+  font-size: 10px;
  }
 
 .personal {
