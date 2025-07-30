@@ -5,17 +5,16 @@
 @font-face {font-family: "playwrite"; src: url(./fonts/PlaywriteCU-VariableFont_wght.ttf);}
 
 body {
-  /* font-family: 'gen'; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 10px;
   font-family: Courier;
   font-weight: 600;
   font-size: 0.8rem;
-  /* background-color: rgb(30, 212, 152); */
-  /* background-color: black; */
   background-color: rgb(134, 233, 200);
   color: black;
-  display: grid;
-  gap: 10px;
-  justify-content: center;
 }
 
 @keyframes float {
@@ -59,13 +58,12 @@ textarea {
 }
 
  #banner{
-   /* display: block;
-   margin-left: auto;
-   margin-right: auto; */
    margin-bottom: 5px;
    max-width: 500px;
    width: 95%;
-   border: 5px solid rgb(169, 28, 197)
+   border: 5px solid rgb(169, 28, 197);
+   transform: perspective(180px) rotateX(-5deg);
+   box-shadow: 0px 5px 5px yellow;
 
  }
 
@@ -115,10 +113,33 @@ textarea {
 }
 
 
+#date-display{
+  font-family: 'playwrite';
+  font-size: 20px;
+  display: flex;
+  justify-content: end;
+}
+
 #dob-disp {
   height: 70px;
 }
 
+.dunkthank{
+  width: 100%;
+  border-radius: 15px;
+}
+
+.e-score{
+  font-size: 40px;
+    display: flex;
+  justify-content: center;
+}
+
+#ethics-score{
+transform: perspective(400px) rotateY(10deg);
+background: transparent;
+box-shadow: -10px 5px 5px yellow;
+}
 
 .floating0 {
   position: relative;
@@ -141,7 +162,7 @@ textarea {
 }
 
 fieldset{
-  border-color: rgb(169, 28, 197)
+  border-color: rgb(169, 28, 197);
 }
 
 footer{
@@ -152,6 +173,11 @@ footer{
    align-items: center;
    justify-content: center;
    margin-top: 25px;
+}
+
+#info{
+  background-color: #600fa3;
+  color: white;
 }
 
 .item {
@@ -183,8 +209,20 @@ footer{
 }
 
 #personal{
-  border-radius: 5px;
+  border-radius: 8px;
   background-position: center top;
+  border: 4px solid rgb(169, 28, 197);
+}
+
+.phone{
+  font-size: 14px;
+  font-style: italic;
+  color: red;
+}
+
+.rsvp{
+  transform: perspective(400px) rotateY(-10deg);
+  box-shadow: 10px 5px 5px yellow;
 }
 
 .shop-button-box{
@@ -192,6 +230,34 @@ footer{
   gap: 15px;
   align-items: end;
 }
+
+
+ #submit {
+  transform: perspective(80px) rotateY(25deg);
+  width:40%;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0px;
+  -webkit-box-shadow: -15px -10px 4px #e388e3;
+  -moz-box-shadow: -15px -10px 4px #e388e3;
+  box-shadow: -15px -10px 4px #e388e3;
+  color: #34d98f;
+  font-size: 20px;
+  background: #833dbf;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+#submit:hover {
+  background: #600fa3;
+  text-decoration: none;
+    -webkit-box-shadow: -9px -10px 4px #e388e3;
+  -moz-box-shadow: -9px -10px 4px #e388e3;
+  box-shadow: -9px -10px 4px #e388e3;
+}
+
+
+
 
 #test {
   display: grid;

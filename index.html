@@ -21,23 +21,38 @@
                         <input id="name2" type="text" maxlength="40" placeholder="(optional)"></input>
                         <br><br>
         
-                        <label id="email-label" for="email" class="topic">What is Your Email? (please skip):</label> <br>
+                        <label id="email-label" for="email" class="topic">Contact? (please skip):</label> <br>
                         <input id="email" class="pert" type="email" maxlength="40" placeholder="absolutelydonotskip@billy.net"></input>
+                        <div id="contact-type">
+                            <input type="radio" id="venmo" name="contact-type" value="venmo" />
+                            <label for="venmo">venmo</label>
+                            <input type="radio" id="email" name="contact-type" value="email" />
+                            <label for="email">email</label>
+                            <input type="radio" id="phone" name="contact-type" value="phone" />
+                            <label for="phone">phone</label>
+                            <input type="radio" id="usps" name="contact-type" value="usps" />
+                            <label for="usps">usps</label>
+                            <input type="radio" id="stargirl" name="contact-type" value="st^rgirl" />
+                            <label for="stargirl">𝐒𝐭✰𝐫𝐠𝐢𝐫𝐥</label>
+                        </div>
                         <br><br>
 
-                        <label id="nature" for="nature">The Nature Of My Attendance Will Be Mostly:</label><br>
-                         <label><input type="checkbox" class="inline" name="nature" value="social">Social</label>
-                         <label><input type="checkbox" class="inline" name="nature" value="culinary">Culinary</label>
-                         <label><input type="checkbox" class="inline" name="nature" value="networking">Networking</label><br>
-                         <label><input type="checkbox" class="inline" name="nature" value="obligatory">Obligatory</label>
-                         <label><input type="checkbox" class="inline" name="nature" value="spiritual">Spiritual</label>
-                         <label><input type="checkbox" class="inline" name="nature" value="clout-driven">Clout-Driven</label><br>
-                         <label><input type="checkbox" class="inline" name="nature" value="fomo-based">FOMO-Based</label>
-                         <label><input type="checkbox" class="inline" name="nature" value="decentralized">Decentralized</label>
-                         <label><input type="checkbox" class="inline" name="nature" value="romantic">Romantic</label><br>
-                         <label><input type="checkbox" class="inline" name="nature" value="carnal">Carnal</label>
-                         <label><input type="checkbox" class="inline" name="nature" value="humbling">Humbling</label>
-                         <label><input type="checkbox" class="inline" name="nature" value="we'll see">We'll See</label>
+
+                        <div id="nature" for="nature">
+                            <label>The Nature Of My Attendance Will Be Mostly:</label><br>
+                             <label for="social"><input type="radio" checked id="n-social"  name="nature" value="social">Social</label>
+                             <label for="culinary"><input type="radio" id="n-culinary" name="nature" value="culinary">Culinary</label>
+                             <input type="radio"  name="nature" value="networking">Networking</label><br>
+                             <input type="radio"  name="nature" value="obligatory">Obligatory</label>
+                             <input type="radio"  name="nature" value="spiritual">Spiritual</label>
+                             <input type="radio"  name="nature" value="clout-driven">Clout-Driven</label><br>
+                             <input type="radio"  name="nature" value="fomo-based">FOMO-Based</label>
+                             <input type="radio"  name="nature" value="decentralized">Decentralized</label>
+                             <input type="radio"  name="nature" value="romantic">Romantic</label><br>
+                             <input type="radio"  name="nature" value="carnal">Carnal</label>
+                             <input type="radio"  name="nature" value="humbling">Humbling</label>
+                             <input type="radio"  name="nature" value="'we'll see'">We'll See</label>
+                        </div>
                         <br><br>
 
                         <label for="drive">You Good To Drive?</label><br>
@@ -55,14 +70,15 @@
                         
         
                         <div id="dob">
-                            <label for="dob" class="topic">D.O.B.: <span id="date-display"></span></label><br>
+                            <label for="dob" class="topic">D.O.B.:</label> <br>
                             <input type="range" min="1" max="12" value="4" class="slider" id="month-slider">
                             <input type="range" min="1" max="32" value="20" class="slider" id="day-slider">
                             <div id="dob-disp">
                                 <span id="day-disp"></span>
                             </div>
+                            <span id="date-display"></span>
                         </div>
-                        <br><br>
+                        
             </fieldset>
         </div>
         <div id="test">
@@ -77,6 +93,13 @@
                 </div>
             </fieldset>
         </div>
+        <div id="ethics-score">
+            <fieldset>
+                <legend>You're Ethics Score is...</legend>
+                <span class="e-score">⋆.˚✮<span id="e-number" class="e-score">🎧</span>✮˚.⋆</span>
+
+            </fieldset>
+        </div>
         <div id="bring">
             <fieldset id="bringer">
             <legend>Not Sure What To Bring?</legend>
@@ -89,28 +112,44 @@
         <div class="rsvp">
             <fieldset id="rsvp" aria-errormessage="errormsg" required>
                     <legend>Your R. S'il Vous Plait</legend>
-                    <input type="radio" id="yes" value="coming" name="rsvp" checked>
+                    <input type="radio" id="yes" value="I am absolutely coming" name="rsvp" checked>
                     <label for="yes">I'm Already There</label><br>
     
-                    <input type="radio" id="maybe" value="not coming" name="rsvp">
+                    <input type="radio" id="maybe" value="I am in no way coming" name="rsvp">
                     <label for="maybe">I've Got Another Thing</label><br>
     
-                    <input type="radio" id="9" value="..hold on my wife is calling" name="rsvp">
+                    <input type="radio" id="9" value="I am asking my wife if I can come" name="rsvp">
                     <label for="9">I Hear My Wife Calling Me</label><br>
     
-                    <input type="radio" id="good-enough" value="my dog might come" name="rsvp">
+                    <input type="radio" id="good-enough" value="me and my dog might come" name="rsvp">
                     <label for="good-enough">Nope, That's Just My Dog</label><br>
     
-                    <input type="radio" id="no" value="dog" name="rsvp">
+                    <input type="radio" id="no" value="my dog and I send our regrets" name="rsvp">
                     <label for="no">Well The Dog Needs Me Now</label><br>
 
-                    <input type="radio" id="no" value="not coming" name="rsvp">
+                    <input type="radio" id="no" value="I wish to unsubscribe from further invites" name="rsvp">
                     <label for="no">Maybe Next Year</label><br>
+
+                    <input type="radio" id="no" value="I may come" name="rsvp">
+                    <label for="no">But Maybe This Year</label><br>
                 </fieldset>
         </div>
+        
+        <br><br>
+        <button id="submit">SUBMIT</button>
+        <br>
 
+        <div id="rsvp-directions" class="bye">
+            <span>screenshot and send this rsvp to</span>
+            <span class="phone">508.410.8286</span>
+        </div>
+        <div id="info" class="info bye">
+            <p id="info-body"></p>
+            <p id="iApproach"></p>
+            <p id="iEthic"></p>
+            <p id="iContact"></p>
+            <p>Lastly, I love you.</p>
 
-        <div id="info" class="info hidden">
 
         </div>
 
