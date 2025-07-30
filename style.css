@@ -31,6 +31,21 @@ body {
   }
 }
 
+@keyframes swing {
+  0%{
+    transform: perspective(50px) rotateY(25deg);
+  }
+
+  50%{
+    transform: perspective(50px) rotateY(-25deg);
+  }
+
+  100%{
+    transform: perspective(50px) rotateY(25deg);
+  }
+}
+
+
  a{
    color: rgb(186, 59, 211);
  }
@@ -48,10 +63,34 @@ div {
   max-width: 500px;
 }
 
+fieldset{
+  border-color: rgb(169, 28, 197);
+}
+
+footer{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 10px;
+   align-items: center;
+   justify-content: center;
+   margin-top: 25px;
+}
+
+h1{
+  margin: 0;
+  font-size: 15px;
+}
+
+ legend{
+   font-family: 'oddballz';
+   font-size: 15px;
+   color: rgb(37, 36, 36)
+ }
+
 input[type="text"],
 input[type="email"],
 textarea {
-  /* background-color: #0a0a23; */
   background-color: rgb(231, 185, 240);
   color: black;
   width: 95%;
@@ -63,7 +102,7 @@ textarea {
    max-width: 500px;
    width: 95%;
    border: 5px solid rgb(169, 28, 197);
-   transform: perspective(280px) rotateX(-5deg);
+   /* transform: perspective(40px) rotateX(-2deg) translateY(10px); */
    box-shadow: 0px 10px 5px yellow;
 
  }
@@ -109,8 +148,8 @@ textarea {
 }
 
 .corn {
-  width: 23.6px;
-  /* filter: invert(85%) sepia(81%) saturate(453%) hue-rotate(359deg) brightness(95%) contrast(91%); */
+  width: 6.25%;
+  filter: invert(63%) sepia(88%) saturate(359%) hue-rotate(100deg) brightness(57%) contrast(86%);
 }
 
 
@@ -122,7 +161,7 @@ textarea {
 }
 
 #dob-disp {
-  height: 70px;
+  height: 50px;
 }
 
 .dunkthank{
@@ -169,20 +208,6 @@ box-shadow: -10px 5px 5px yellow;
   animation: float 5s ease-in-out infinite;
 }
 
-fieldset{
-  border-color: rgb(169, 28, 197);
-}
-
-footer{
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   gap: 10px;
-   align-items: center;
-   justify-content: center;
-   margin-top: 25px;
-}
-
 #info{
   padding-left: 10px;
   padding-right: 10px;
@@ -204,21 +229,13 @@ footer{
   width: 100%;
 }
 
- legend{
-   font-family: 'oddballz';
-   color: rgb(37, 36, 36)
- }
-
  #option{
   font-size: 10px;
  }
 
 .personal {
-  /* color:#0a0a23;
-  font-weight: 600; */
   background-size: contain;
-  /* height: 615px; */
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
   background-blend-mode: lighten;
 }
 
@@ -239,12 +256,19 @@ footer{
   box-shadow: 10px 5px 5px yellow;
 }
 
+.rsvp-head{
+  color:#34d98f
+}
+
+.rsvp-size{
+  font-size: 15px;
+}
+
 .shop-button-box{
   display: flex;
   gap: 15px;
   align-items: end;
 }
-
 
  #submit {
   transform: perspective(80px) rotateY(25deg);
@@ -260,6 +284,9 @@ footer{
   background: #833dbf;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
+
+  position: relative;
+  animation: swing 7s ease-in-out infinite;
 }
 
 #submit:hover {
@@ -269,9 +296,6 @@ footer{
   -moz-box-shadow: -9px -10px 4px #e388e3;
   box-shadow: -9px -10px 4px #e388e3;
 }
-
-
-
 
 #test {
   display: grid;
