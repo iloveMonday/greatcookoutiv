@@ -59,11 +59,11 @@ textarea {
 }
 
  #banner{
-   display: block;
+   /* display: block;
    margin-left: auto;
-   margin-right: auto;
+   margin-right: auto; */
    margin-bottom: 5px;
-   max-width: 400px;
+   max-width: 500px;
    width: 95%;
    border: 5px solid rgb(169, 28, 197)
 
@@ -185,6 +185,12 @@ footer{
 #personal{
   border-radius: 5px;
   background-position: center top;
+}
+
+.shop-button-box{
+  display: flex;
+  gap: 15px;
+  align-items: end;
 }
 
 #test {

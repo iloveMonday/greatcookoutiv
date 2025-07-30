@@ -185,6 +185,8 @@ function bringIt(num){
 }
 
 bringButton.addEventListener("click", ()=>{
+    let notIt = document.getElementById("not-it")
+    notIt.classList.remove("bye");
     bringBox.innerHTML = '';
     for (i=0; i<3; i++)
     {bringIt(i);}
