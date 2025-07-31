@@ -22,10 +22,15 @@ let testBox = document.getElementById("test-pic-box");
 let eNumber = document.getElementById("e-number");
 let bringButton = document.getElementById("bring-button");
 let bringBox = document.getElementById("bring-box");
+let add0 = document.getElementById("add0");
+let add1 = document.getElementById("add1");
+let add2 = document.getElementById("add2");
 let rsvpForm = document.getElementById("rsvp");
 let feedback = document.getElementById("feedback");
 let slide = 1;
 let ethicsScore = 0;
+let currentItems = [];
+let selectedItems = [];
 
 
 
@@ -173,33 +178,98 @@ const images = [
 ];
 
 
-function getRandomImage(){
-    if (images.length > 0){
+// function getRandomImage(){
+//     if (images.length > 0){
+//         let randomIndex = Math.floor(Math.random() * images.length);
+//         return images[randomIndex];
+//     }
+//     else{
+//         return './pics/spirited-away-food.gif'
+//     }
+// }
+
+
+function getRandoms(){
+    currentItems=[];
+    for (i=0; i<3;i++)
+    {if (images.length > 0){
         let randomIndex = Math.floor(Math.random() * images.length);
-        return images[randomIndex];
+        currentItems.push(images[randomIndex]);
     }
     else{
-        return './pics/spirited-away-food.gif'
-    }
+        currentItems.push('./pics/spirited-away-food.gif')
+    }}
+
 }
 
+
+
+
 function bringIt(num){
-    let item = document.createElement("img")
-    // item.src = "./bring/banhmi.png";
-    item.src = getRandomImage();
-    item.className = "floating"+num;
-    item.classList.add("item");
+    add0.classList.remove("bye");
+    add1.classList.remove("bye");
+    add2.classList.remove("bye");
+    let item = document.createElement("img");
+    item.src = currentItems[num];
+    item.id = "floating"+num;
+    item.classList.add("item");   
     bringBox.appendChild(item);
+
+    let notIt = document.getElementById("not-it")
+    notIt.classList.remove("bye");
+    let desc = document.getElementById("click-to-add");
+    desc.classList.remove("bye");
+    // bringBox.style.height='137px';
 }
 
 bringButton.addEventListener("click", ()=>{
-    let notIt = document.getElementById("not-it")
-    notIt.classList.remove("bye");
     bringBox.innerHTML = '';
+    getRandoms()
     for (i=0; i<3; i++)
     {bringIt(i);}
-    console.log("hi")
 })
+
+function updateCartNumber(){
+    let cart = document.getElementById("cart-number");
+    cart.innerHTML = '';
+    cart.innerHTML = selectedItems.length;
+}
+
+
+add0.addEventListener("click", ()=>{
+    if(selectedItems.length<30){
+    selectedItems.push(currentItems[0])}
+    else{
+        alert("cart is full!")
+    }
+    updateCartNumber();
+
+
+    console.log(selectedItems)
+})
+add1.addEventListener("click", ()=>{
+    if(selectedItems.length<30){
+    selectedItems.push(currentItems[1])}
+    else{
+        alert("cart is full!")
+    }
+    updateCartNumber()
+
+    console.log(selectedItems)
+})
+add2.addEventListener("click", ()=>{
+    if(selectedItems.length<30){
+    selectedItems.push(currentItems[2])}
+    else{
+        alert("cart is full!")
+    }
+    updateCartNumber();
+    
+    console.log(selectedItems)
+})
+
+
+
 
 
 function displayRSVP(){
@@ -208,7 +278,6 @@ function displayRSVP(){
     let iname = document.getElementById("info-name");
     let icontact = document.getElementById("iContact");
     let iethic = document.getElementById("iEthic");
-    // let iapproach = document.getElementById("iApproach");
     let natureSelect = nature.querySelector('input:checked');
     let also = document.getElementById("also");
     let alias = document.getElementById("alias");
@@ -216,7 +285,6 @@ function displayRSVP(){
     let dir = document.getElementById("rsvp-directions");
 
 
-    // ------------KEEP THIS - UNBLOCK IT!!1---------------
     if (name.value == ""){
         alert("what is your name my dear boy?")
         return
@@ -245,6 +313,10 @@ function displayRSVP(){
     dir.classList.remove("bye");
 }
 
+
+
+
+
 let submit = document.getElementById("submit");
 
 submit.addEventListener("click", () => {
@@ -252,8 +324,6 @@ submit.addEventListener("click", () => {
     displayRSVP();
 
 })
-
-
 
 
 
@@ -296,6 +366,4 @@ function monthMan(num){
         return "Dec"
     }
     else return "Other"
-    
-
 }

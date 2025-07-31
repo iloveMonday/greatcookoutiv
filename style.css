@@ -97,6 +97,12 @@ textarea {
   border: 1px solid #0a0a23;
 }
 
+.add-buttons{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 15%;
+}
+
  #banner{
    margin-bottom: 5px;
    max-width: 500px;
@@ -115,7 +121,8 @@ textarea {
 
 #bring-box {
   width: 90vw;
-  height: 150px;
+  height: 160px;
+  /* height: 300px; */
 }
 
 #bring-button {
@@ -145,6 +152,30 @@ textarea {
 .bye {
   display: none;
   visibility: hidden;
+}
+
+#cart{
+  height: 30px;
+}
+
+#cart-box{
+ display: flex;
+ align-items: center;
+ gap: 5px;
+}
+
+#cart-number{
+  font-size: 24px;
+}
+
+#click-to-add{
+  display: flex;
+  justify-content: center;
+  color: rgb(168, 168, 11);
+  /* background-color: #0a0a23; */
+  font-family: "bybsy";
+  font-size: 20px;
+  height: 20px;
 }
 
 .corn {
@@ -188,17 +219,17 @@ background: transparent;
 box-shadow: -10px 5px 5px yellow;
 }
 
-.floating0 {
+#floating0 {
   position: relative;
   animation: float 3s ease-out infinite;
 }
 
-.floating1 {
+#floating1 {
   position: relative;
   animation: float 7s ease-in-out infinite;
 }
 
-.floating2 {
+#floating2 {
   position: relative;
   animation: float 1.5s ease-in-out infinite;
 }
@@ -220,9 +251,37 @@ box-shadow: -10px 5px 5px yellow;
   height: 150px;
 }
 
+
+.item-button {
+	box-shadow: 0px 0px 0px 0px #3dc21b;
+	background-color:#c46ff2;
+	border-radius:42px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Impact;
+	font-size:20px;
+	font-weight:bold;
+	padding:10px 16px;
+	text-decoration:none;
+	text-shadow:0px 0px 8px #2f6627;
+}
+.item-button:hover {
+	background-color:#8347b8;
+}
+.item-button:active {
+	position:relative;
+	top:1px;
+}
+
 #month-slider {
   /* writing-mode: vertical-lr; */
   width: 80%;
+}
+
+#not-it-box{
+  padding: 15px
 }
 
 #day-slider {
@@ -267,7 +326,8 @@ box-shadow: -10px 5px 5px yellow;
 .shop-button-box{
   display: flex;
   gap: 15px;
-  align-items: end;
+  align-items: center;
+  justify-content: space-between;
 }
 
  #submit {

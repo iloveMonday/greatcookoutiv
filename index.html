@@ -106,9 +106,24 @@
         <div id="bring">
             <fieldset id="bringer">
             <legend>Not Sure What To Bring?</legend>
-            <div class="shop-button-box"><button id="bring-button">LET'S GO SHOPPING</button><span id="not-it" class="bye">not it? try again!</span></div>
+            <div class="shop-button-box">
+                <button id="bring-button">LET'S GO SHOPPING</button>
+                <span id="not-it" class="bye">click again for more items!</span>
+                <div id="cart-box">
+                    <span id="cart-number">0</span>
+                    <img src="./cart.svg" id="cart" alt="cart">
+                </div>
+            </div>
+            <!-- <div class="not-it-box"><span id="not-it" class="bye">click again to see more items!</span></div> -->
             <br><br>            
-                <div id="bring-box"></div>
+                <div id="bring-box">
+                </div>
+                    <div class="add-buttons">
+                        <button id="add0" class="bye item-button">+</button>
+                        <button id="add1" class="bye item-button">+</button>
+                        <button id="add2" class="bye item-button">+</button>
+                    </div>
+                    <span id="click-to-add" class="bye">Add To Cart</span>
             </fieldset>
         </div>
 
