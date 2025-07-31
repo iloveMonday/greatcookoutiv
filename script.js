@@ -20,6 +20,7 @@ let dayDisp = document.getElementById("day-disp");
 let dateDisplay = document.getElementById("date-display");
 let testBox = document.getElementById("test-pic-box");
 let eNumber = document.getElementById("e-number");
+let cartBox = document.getElementById("cart-box");
 let bringButton = document.getElementById("bring-button");
 let bringBox = document.getElementById("bring-box");
 let add0 = document.getElementById("add0");
@@ -27,6 +28,7 @@ let add1 = document.getElementById("add1");
 let add2 = document.getElementById("add2");
 let rsvpForm = document.getElementById("rsvp");
 let feedback = document.getElementById("feedback");
+let rsvpCart = document.getElementById("rsvp-cart");
 let slide = 1;
 let ethicsScore = 0;
 let currentItems = [];
@@ -235,6 +237,10 @@ function updateCartNumber(){
     cart.innerHTML = selectedItems.length;
 }
 
+cartBox.addEventListener("click", () =>{
+    alert('Submit RSVP to see the contents of your Cart. Best wishes & divine light unto you.')
+})
+
 
 add0.addEventListener("click", ()=>{
     if(selectedItems.length<30){
@@ -264,10 +270,19 @@ add2.addEventListener("click", ()=>{
         alert("cart is full!")
     }
     updateCartNumber();
-    
+
     console.log(selectedItems)
 })
 
+function displayCart(){
+    for (i=0; i<selectedItems.length; i++){
+        let img = document.createElement("img");
+        img.src = selectedItems[i];
+        img.id = "cart-item-"+i;
+        img.className = "cart-item";
+        rsvpCart.appendChild(img)
+    }
+}
 
 
 
@@ -283,6 +298,7 @@ function displayRSVP(){
     let alias = document.getElementById("alias");
     let rsvp = rsvpForm.querySelector('input:checked');
     let dir = document.getElementById("rsvp-directions");
+    let hope = document.getElementById("hope");
 
 
     if (name.value == ""){
@@ -301,6 +317,10 @@ function displayRSVP(){
         icontact.innerHTML = `If you need to reach me, hit up at ${contact.value}.`;
 }
 
+    if (selectedItems.length>0){
+        hope.innerHTML = "Hope you don't mind if I bring:"
+    }
+
     if (feedback.value){
         also.innerHTML = `And by the way, ${feedback.value}`
     }
@@ -311,6 +331,7 @@ function displayRSVP(){
 
     infoBox.classList.remove("bye");
     dir.classList.remove("bye");
+    displayCart();
 }
 
 
